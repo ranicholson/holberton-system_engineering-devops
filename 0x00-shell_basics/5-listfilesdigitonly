@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -larn
+ls -lar | sort -k 3,4
