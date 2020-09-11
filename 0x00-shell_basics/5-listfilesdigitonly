@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -lan | sort -k 3,4
+ls -lan
