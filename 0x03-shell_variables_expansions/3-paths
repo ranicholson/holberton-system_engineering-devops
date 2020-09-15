@@ -1,2 +1,2 @@
 #!/bin/bash
-printenv $PATH | find -type d
+printenv $PATH | find -type d | wc -l
