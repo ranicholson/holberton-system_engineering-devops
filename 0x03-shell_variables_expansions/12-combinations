@@ -1,2 +1,2 @@
 #!/bin/bash
-echo {"a..n ", "p..z"}{"a..z"}
+echo {a..n,p..z}{a..z}
