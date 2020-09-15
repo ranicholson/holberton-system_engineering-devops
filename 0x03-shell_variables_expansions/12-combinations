@@ -1,2 +1,2 @@
 #!/bin/bash
-eval echo {a..z}{{a..n},{p..z}} | tr [:space:] '\t'
+echo {a..z}{{a..n},{p..z}} | tr [:space:] '\t'
