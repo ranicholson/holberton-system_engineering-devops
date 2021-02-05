@@ -6,11 +6,10 @@ z=1
 
 while [ $z -le 10 ]
 do
-  if [ $z -eq 9 ]
+  echo "$x"
+  if [ $z -eq 8 ]
   then
     echo "$y"
-  else
-    echo "$x"
   fi
   ((z++))
 done
