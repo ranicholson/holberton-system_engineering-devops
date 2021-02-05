@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+ten=10
+x="Holberton School"
+
+for ((y=1;y<=ten;y++))
+do
+  echo "$x"
+done
