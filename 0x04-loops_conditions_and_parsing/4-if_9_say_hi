@@ -7,7 +7,7 @@ z=1
 while [ $z -le 10 ]
 do
   echo "$x"
-  if [ $z -eq 8 ]
+  if [ $z -eq 9 ]
   then
     echo "$y"
   fi
