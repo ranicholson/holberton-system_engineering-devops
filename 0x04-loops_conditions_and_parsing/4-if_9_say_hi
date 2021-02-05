@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Using a while loop to print a message, print different message 9th time
+x="Holberton School"
+y="Hi"
+z=1
+
+while [ $z -le 10 ]
+do
+  if [ $z -eq 9 ]
+  then
+    echo "$y"
+  else
+    echo "$x"
+  fi
+  ((z++))
+done
