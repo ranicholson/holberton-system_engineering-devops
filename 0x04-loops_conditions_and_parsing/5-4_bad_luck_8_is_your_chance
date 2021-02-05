@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# WHile loop to print messages under certain circumstances
+x="Holberton School"
+b="bad luck"
+g="good luck"
+y=1
+
+while [ $y -le 10 ]
+do
+  if [ $y -eq 4 ]
+  then
+    echo "$b"
+  elif [ $y -eq 8 ]
+  then
+    echo "$g"
+  else
+    echo "$x"
+  fi
+  ((y++))
+done
