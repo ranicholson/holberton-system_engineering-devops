@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Using an until loop to print a message
+x="Holberton School"
+y=0
+until [ $y -eq 10 ]
+do
+  echo "$x"
+  ((y++))
+done

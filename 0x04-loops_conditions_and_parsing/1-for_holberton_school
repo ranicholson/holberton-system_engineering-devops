@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# using a for loop to print a message
 ten=10
 x="Holberton School"
 
