@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+B#!/usr/bin/env bash
 # Displays to infinity and beyond indefinitley
 
 x=0
@@ -7,5 +7,5 @@ while [ $x ]
 do
   echo "To infinity and beyond"
   sleep 2
-  trap "echo "I am invincible!!!"" SIGTERM
+  trap 'echo "I am invincible!!!"' SIGTERM
 done
