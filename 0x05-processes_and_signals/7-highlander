@@ -1,4 +1,4 @@
-B#!/usr/bin/env bash
+#!/usr/bin/env bash
 # Displays to infinity and beyond indefinitley
 
 x=0
