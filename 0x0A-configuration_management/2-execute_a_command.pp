@@ -1,6 +1,6 @@
 # Using puppet to kill as process
 
-exec { 'pkiller':
-    command => 'pkill -f killmenow',
+exec { 'pkill killmenow':
+    command => 'pkill killmenow',
     path => '/usr/bin/:/usr/local/bin/:/bin/',
 }
