@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Script to fix apache in container
+
+service apache2 start
