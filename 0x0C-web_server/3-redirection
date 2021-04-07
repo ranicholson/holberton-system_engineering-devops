@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Script to install nginx and set some configuraiton options
 
-sudo apt-get -y update
-sudo apt-get -y install nginx
-sudo echo "Holberton School" | sudo tee /usr/share/nginx/html/index.html
-sudo sed -i '/listen 80 default_server; rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
-sudo service nginx start
+apt-get -y update
+apt-get -y install nginx
+echo "Holberton School" | tee /usr/share/nginx/html/index.html
+sed -i '/listen 80 default_server; rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-available/default
+service nginx start
