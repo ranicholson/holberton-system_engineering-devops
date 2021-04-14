@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Script to fix missing link
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx restart
+service nginx stop
