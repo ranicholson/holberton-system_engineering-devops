@@ -14,9 +14,10 @@ if __name__ == "__main__":
     USERNAME = employee.get("name")
 
     with open("{}.json".format(USER_ID), "w") as jsonfile:
+        tlist = []
         for todo in tasks:
-            json.dump({USER_ID: [{
-                "task": todo.get("title"),
+            tlist.append({"task": todo.get("title"),
                 "completed": todo.get("completed"),
-                "username": USERNAME
-                }]}, jsonfile)
+                "username": USERNAME})
+        jdict = {USER_ID: tlist}
+        json.dump(jdict, jsonfile)
