@@ -12,7 +12,7 @@ if __name__ == "__main__":
     with open("todo_all_employees.json", "w") as jsonfile:
         for user in users:
             ulist = []
-            USER_ID = user.get("id")
+            USER_ID = user.get("userId")
             for task in requests.get(url_target + "todos",
                                      params={"userId": USER_ID}).json():
                 ulist.append({"username": user.get("username"),
