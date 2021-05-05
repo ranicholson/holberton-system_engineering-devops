@@ -17,7 +17,7 @@ if __name__ == "__main__":
         tlist = []
         for todo in tasks:
             tlist.append({"task": todo.get("title"),
-                "completed": todo.get("completed"),
-                "username": USERNAME})
+                         "completed": todo.get("completed"),
+                          "username": USERNAME})
         jdict = {USER_ID: tlist}
         json.dump(jdict, jsonfile)
