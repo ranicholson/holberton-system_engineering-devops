@@ -8,9 +8,9 @@ import sys
 if __name__ == "__main__":
     url_target = "https://jsonplaceholder.typicode.com/"
     USER_ID = sys.argv[1]
-    employee = requests.get(url_target + "users/{}".format(2)).json()
+    employee = requests.get(url_target + "users/{}".format(USER_ID)).json()
     tasks = requests.get(url_target + "todos", params={
-                        "userId": sys.argv[1]}).json()
+                        "userId": USER_ID}).json()
     USERNAME = employee.get("username")
 
     with open("{}.csv".format(USER_ID), "w") as csvfile:
