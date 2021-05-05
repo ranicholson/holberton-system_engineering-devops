@@ -18,6 +18,5 @@ if __name__ == "__main__":
                 ulist.append({"username": user.get("username"),
                              "task": task.get("title"),
                               "completed": task.get("completed")})
-                print(task)
-            jdict = {USER_ID: ulist}
-            json.dump(jdict, jsonfile)
+                jdict = {USER_ID: ulist}
+                json.dump(jdict, jsonfile)
