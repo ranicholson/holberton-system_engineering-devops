@@ -7,10 +7,10 @@ import sys
 
 if __name__ == "__main__":
     url_target = "https://jsonplaceholder.typicode.com/"
-    USER_ID = sys.argv[1]
-    employee = requests.get(url_target + "users/{}".format(sys.argv[1])).json()
+    USER_ID = sys.argv[2]
+    employee = requests.get(url_target + "users/{}".format(sys.argv[2])).json()
     tasks = requests.get(url_target + "todos", params={
-                        "userId": sys.argv[1]}).json()
+                        "userId": sys.argv[2]}).json()
     USERNAME = employee.get("name")
 
     with open("{}.csv".format(USER_ID), "w") as csvfile:
