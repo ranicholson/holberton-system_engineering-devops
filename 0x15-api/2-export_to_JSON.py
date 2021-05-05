@@ -11,7 +11,7 @@ if __name__ == "__main__":
     employee = requests.get(url_target + "users/{}".format(sys.argv[1])).json()
     tasks = requests.get(url_target + "todos", params={
                         "userId": sys.argv[1]}).json()
-    USERNAME = employee.get("name")
+    USERNAME = employee.get("user.name")
 
     with open("{}.json".format(USER_ID), "w") as jsonfile:
         tlist = []
