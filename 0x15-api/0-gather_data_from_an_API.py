@@ -15,7 +15,7 @@ if __name__ == "__main__":
         if todos.get("completed") is True:
             completetasks.append(todos.get("title"))
 
-    print("Employee {} is done with tasks({}/{}:)".format(
+    print("Employee {} is done with tasks({}/{}):".format(
             employee.get("name"), len(completetasks), len(tasks)))
     for title in completetasks:
         print("\t {}".format(title))
