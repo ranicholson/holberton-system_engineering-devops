@@ -13,10 +13,11 @@ if __name__ == "__main__":
         for user in users:
             ulist = []
             USER_ID = user.get("id")
-            for task in requests.get(url_target + "todos",
-                                     params={"userId": USER_ID}).json():
+            tasklist = requests.get(url_target + "todos",
+                                     params={"userId": USER_ID}).json()
+            for task in tasklist:
                 ulist.append({"username": user.get("username"),
                              "task": task.get("title"),
                               "completed": task.get("completed")})
-                jdict = {USER_ID: ulist}
-                json.dump(jdict, jsonfile)
+            jdict = {USER_ID: ulist}
+            json.dump(jdict, jsonfile)
