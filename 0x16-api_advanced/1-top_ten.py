@@ -19,4 +19,4 @@ def top_ten(subreddit):
         hot_post = r.json().get("data").get("children")
         for post in hot_post:
             print(post.get("data").get("title"))
-    return (0)
+    print("None")
