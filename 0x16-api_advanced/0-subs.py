@@ -10,7 +10,7 @@ def number_of_subscribers(subreddit):
      "User-Agent": "Stranger Danger"
     }
     target_url = "https://www.reddit.com/r/" + subreddit + "/about.json"
-    r = requests.get(target_url, headers=user_agent)
+    r = requests.get(target_url, headers=user_agent, allow_redirects=False)
 
     if r.status_code == 200:
         user_count = r.json().get("data").get("subscribers")

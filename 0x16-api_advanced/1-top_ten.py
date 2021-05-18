@@ -13,10 +13,12 @@ def top_ten(subreddit):
         "limit": 10
     }
     target_url = "https://www.reddit.com/r/" + subreddit + "/hot.json"
-    r = requests.get(target_url, headers=user_agent, params=parameters)
+    r = requests.get(target_url, headers=user_agent, params=parameters,
+                     allow_redirects=False)
 
-    if r.status_code == 200:
+    if r.status_code < 300:
         hot_post = r.json().get("data").get("children")
         for post in hot_post:
             print(post.get("data").get("title"))
-    print("None")
+    else:
+        print(None)
