@@ -13,8 +13,8 @@ def recurse(subreddit, hot_list=[], after=None):
     parameters = {
         "limit": 100
     }
-    target_url = "https://www.reddit.com/r/" + subreddit +
-    "/hot.json?after=" + str(after)
+    target_url = "https://www.reddit.com/r/" + subreddit\
+        + "/hot.json?after=" + str(after)
     r = requests.get(target_url, headers=user_agent, params=parameters,
                      allow_redirects=False)
 
