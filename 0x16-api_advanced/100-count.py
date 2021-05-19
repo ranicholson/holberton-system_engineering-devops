@@ -5,7 +5,7 @@ import ast
 import requests
 
 
-def recurse(subreddit, hot_list=[], after=None):
+def count_words(subreddit, word_list):
     """Function to get subreddit user count"""
     user_agent = {
      "User-Agent": "Stranger Danger"
@@ -19,9 +19,9 @@ def recurse(subreddit, hot_list=[], after=None):
                      allow_redirects=False)
 
     if r.status_code == 200:
-        hot_post_list = []
-        hot_post = r.json().get("data").get("children")
-        for post in hot_post:
+        word_list_list = []
+        word_list = r.json().get("data").get("children")
+        for post in word_list:
             hot_list.append(post.get("data").get("title"))
         after = (r.json().get("data").get("after"))
         if after is None:
